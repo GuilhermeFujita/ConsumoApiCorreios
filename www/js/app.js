@@ -22,3 +22,14 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.config(function($stateProvider, $urlRouterProvider){
+    $stateProvider
+    .state('inicio', {
+        url: '/inicio',
+        templateUrl: 'templates/inicio.html',
+        controller: 'InicioController'
+    });
+
+    $urlRouterProvider.otherwise('/inicio');
+})
